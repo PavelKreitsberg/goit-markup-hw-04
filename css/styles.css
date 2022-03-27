@@ -49,6 +49,18 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 /* Header */
 
@@ -98,13 +110,18 @@ img {
 
 .site-nav-link,
 .contacts-link {
-  display: block;
+  display: inline-flex;
+  text-align: center;
   color: var(--main-content-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 30px 0px 30px;
+}
+.contacts-link-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 .site-nav-link:hover,
 .site-nav-link:focus {
@@ -122,8 +139,16 @@ img {
 
 .hero {
   background-color: var(--second-background-color);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   padding: 200px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero_background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-title {
   width: 695px;
@@ -161,8 +186,12 @@ img {
   display: inline-block;
   max-width: 270px;
 }
-.section-title.advantages {
-  display: none;
+.advantages-section-item-svg-background {
+  display: flex;
+  background-color: var(--third-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 .advantages-section-title {
   margin-bottom: 10px;
@@ -243,6 +272,15 @@ img {
   letter-spacing: 0.03em;
 }
 
+/* Our clients */
+.section-title.clients {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 /* Footer */
 
 .footer {
@@ -285,9 +323,7 @@ img {
 /* Portfolio */
 
 /* Our projects */
-.our-projects-section-title {
-  display: none;
-}
+
 .our-projects-button-list {
   display: flex;
   justify-content: center;
