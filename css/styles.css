@@ -349,6 +349,8 @@ img {
 .button-filter:focus {
   background-color: var(--accent-color);
   color: var(--main-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Our projects */
@@ -385,6 +387,12 @@ img {
   border-width: 1px;
   border-color: var(--card-border-color);
 }
+.our-projects-list-item:hover,
+.our-projects-list-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .our-projects-list-item:nth-child(3n) {
   margin-right: 0;
 }
