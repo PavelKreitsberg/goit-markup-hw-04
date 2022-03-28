@@ -6,6 +6,7 @@
   --main-content-text-color: #212121;
   --second-content-text-color: #757575;
   --card-border-color: #eeeeee;
+  --passive-icon-color: #afb1b8;
 }
 
 /* Global */
@@ -18,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style: none;
@@ -254,8 +256,7 @@ img {
 }
 .our-team-section-list-item-text {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
 }
 .our-team-member-name {
   font-weight: 500;
@@ -270,6 +271,27 @@ img {
   font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.social-media-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-media-item {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  color: var(--passive-icon-color);
+}
+.social-media-icon {
+  fill: currentColor;
+}
+.social-media-item:hover,
+.social-media-item:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 /* Our clients */
@@ -279,18 +301,44 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.our-clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.our-clients-list-item {
+  color: var(--passive-icon-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--passive-icon-color);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+.our-clients-icon {
+  fill: currentColor;
+}
+.our-clients-list-item:hover,
+.our-clients-list-item:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 /* Footer */
 
 .footer {
+  color: var(--main-background-color);
   background-color: var(--second-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .logo.bottom {
   display: inline-block;
-  color: var(--main-background-color);
+  color: inherit;
   margin-bottom: 20px;
 }
 .address {
@@ -299,7 +347,6 @@ img {
 .adress-contacts-link,
 .adress-location {
   display: inline-block;
-  color: var(--main-background-color);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -319,7 +366,32 @@ img {
 .adress-contacts-link {
   color: rgba(255, 255, 255, 0.6);
 }
+.footer .container {
+  display: flex;
+}
+.footer-social-media-section {
+  width: 206px;
+  margin-left: 70px;
+  padding-top: 12px;
+}
+.footer-social-media-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
+  margin-bottom: 20px;
+}
+.social-media-item.bottom {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: currentColor;
+}
+.social-media-item.bottom:hover,
+.social-media-item.bottom:focus {
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
 /* Portfolio */
 
 /* Our projects */
